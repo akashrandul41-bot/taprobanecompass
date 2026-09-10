@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Sri Lanka | Premium Travel & Tours</title>
+    <meta name="description" content="Explore Sri Lanka with our premium tour packages. Discover beaches, mountains, wildlife, and culture. Plan your journey today.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">Sri Lanka <span>Journeys</span></a>
+            
+            <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <nav class="main-nav" id="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#experiences">Experiences</a></li>
+                    <li><a href="#articles">Journal</a></li>
+                </ul>
+                <a href="#contact" class="btn btn-primary nav-btn">Plan Your Trip</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <img src="assets/images (10).jfif" alt="Sri Lanka Ella Mountains" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-content">
+            <h1 class="hero-title animate-up">Discover Sri Lanka, <br><span>Your Way</span></h1>
+            <p class="hero-subtitle animate-up delay-1">From misty mountains and golden beaches to ancient kingdoms and unforgettable adventures.</p>
+            <div class="hero-cta animate-up delay-2">
+                <a href="#packages" class="btn btn-primary">Explore Packages</a>
+                <a href="#destinations" class="btn btn-outline">Discover Destinations</a>
+            </div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+            <div class="particle p1"></div>
+            <div class="particle p2"></div>
+            <div class="particle p3"></div>
+        </div>
+    </section>
+
+    <!-- Storytelling Section -->
+    <section class="storytelling section-padding">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-content reveal">
+                    <span class="section-tag">Our Story</span>
+                    <h2 class="section-title">More Than a <span>Destination</span></h2>
+                    <p>Sri Lanka is not a place you simply visit. It is a place you slowly discover — one sunrise, one cup of tea, one winding road at a time. Here, the warmth of the people matches the golden sun, and every path leads to a new adventure.</p>
+                    <p>From the wild elephants roaming in Yala to the ancient echoes of Sigiriya, we craft journeys that connect you deeply with the heart of this island.</p>
+                    <a href="#contact" class="btn btn-link">Start Your Journey <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="story-images">
+                    <img src="assets/images (11).jfif" alt="Sri Lanka Nine Arch Bridge" class="story-img-main reveal">
+                    <img src="assets/images (12).jfif" alt="Sri Lanka Travel" class="story-img-small reveal delay-1">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations -->
+    <section id="destinations" class="destinations section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="section-tag">Explore</span>
+                <h2 class="section-title">Popular <span>Destinations</span></h2>
+                <p>Discover the rich tapestry of landscapes and cultures that make up our beautiful island.</p>
+            </div>
+            
+            <div class="destination-grid">
+                <!-- Destination 1 -->
+                <div class="dest-card reveal">
+                    <img src="assets/images (9).jfif" alt="Sigiriya">
+                    <div class="dest-info">
+                        <h3>Sigiriya</h3>
+                        <p>Ancient Rock Fortress</p>
+                        <button class="btn btn-sm" onclick="openDestModal('sigiriya')">Explore</button>
+                    </div>
+                </div>
+                <!-- Destination 2 -->
+                <div class="dest-card reveal delay-1">
+                    <img src="assets/images (10).jfif" alt="Ella">
+                    <div class="dest-info">
+                        <h3>Ella</h3>
+                        <p>Misty Mountains & Tea</p>
+                        <button class="btn btn-sm" onclick="openDestModal('ella')">Explore</button>
+                    </div>
+                </div>
+                <!-- Destination 3 -->
+                <div class="dest-card reveal delay-2">
+                    <img src="assets/29679305-a018-4ba0-9fb9-8cd730d72efa.jfif" alt="Galle">
+                    <div class="dest-info">
+                        <h3>Galle</h3>
+                        <p>Historic Dutch Fort</p>
+                        <button class="btn btn-sm" onclick="openDestModal('galle')">Explore</button>
+                    </div>
+                </div>
+                <!-- Destination 4 -->
+                <div class="dest-card reveal delay-3">
+                    <img src="assets/2a4e8148-1891-4cd0-890e-3bb8c23c8fca.jfif" alt="Mirissa">
+                    <div class="dest-info">
+                        <h3>Mirissa</h3>
+                        <p>Whales & Golden Sands</p>
+                        <button class="btn btn-sm" onclick="openDestModal('mirissa')">Explore</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="packages section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Journeys</span>
+                <h2 class="section-title">Our Featured <span>Packages</span></h2>
+                <p>Curated itineraries designed to give you the ultimate Sri Lankan experience.</p>
+            </div>
+            
+            <div class="package-list">
+                <!-- Package 1 -->
+                <div class="package-card reveal">
+                    <div class="pkg-image">
+                        <img src="assets/images (9).jfif" alt="Sri Lanka Essentials">
+                        <div class="pkg-badge">7 Days / 6 Nights</div>
+                    </div>
+                    <div class="pkg-content">
+                        <h3>Sri Lanka Essentials</h3>
+                        <p class="pkg-desc">The perfect introduction to Sri Lanka, covering the cultural triangle, tea country, and southern coast.</p>
+                        <ul class="pkg-highlights">
+                            <li><i class="fas fa-map-marker-alt"></i> Colombo, Sigiriya, Kandy, Ella, Galle</li>
+                            <li><i class="fas fa-star"></i> 5+ Premium Experiences</li>
+                        </ul>
+                        <div class="pkg-footer">
+                            <span class="price">From $890</span>
+                            <button class="btn btn-primary btn-sm" onclick="openModal('Sri Lanka Essentials')">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="package-card reveal delay-1">
+                    <div class="pkg-image">
+                        <img src="assets/images (11).jfif" alt="Wild Sri Lanka">
+                        <div class="pkg-badge">6 Days / 5 Nights</div>
+                    </div>
+                    <div class="pkg-content">
+                        <h3>Wild Sri Lanka</h3>
+                        <p class="pkg-desc">An immersive wildlife safari experience focusing on leopards, elephants, and exotic birds.</p>
+                        <ul class="pkg-highlights">
+                            <li><i class="fas fa-map-marker-alt"></i> Yala, Udawalawe, Minneriya, Wilpattu</li>
+                            <li><i class="fas fa-star"></i> Luxury Tented Camps</li>
+                        </ul>
+                        <div class="pkg-footer">
+                            <span class="price">From $1,150</span>
+                            <button class="btn btn-primary btn-sm" onclick="openModal('Wild Sri Lanka')">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="package-card reveal delay-2">
+                    <div class="pkg-image">
+                        <img src="assets/images (13).jfif" alt="Romantic Escape">
+                        <div class="pkg-badge">8 Days / 7 Nights</div>
+                    </div>
+                    <div class="pkg-content">
+                        <h3>Romantic Escape</h3>
+                        <p class="pkg-desc">Boutique hotels, private dinners, and secluded beaches for the perfect honeymoon.</p>
+                        <ul class="pkg-highlights">
+                            <li><i class="fas fa-map-marker-alt"></i> Kandy, Nuwara Eliya, Bentota</li>
+                            <li><i class="fas fa-star"></i> Romantic Experiences</li>
+                        </ul>
+                        <div class="pkg-footer">
+                            <span class="price">From $1,450</span>
+                            <button class="btn btn-primary btn-sm" onclick="openModal('Romantic Escape')">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / Stats -->
+    <section class="stats section-padding bg-dark text-white">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <i class="fas fa-smile"></i>
+                    <h3 class="counter" data-target="500">0</h3>
+                    <p>Happy Travelers</p>
+                </div>
+                <div class="stat-item reveal delay-1">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3 class="counter" data-target="50">0</h3>
+                    <p>Destinations</p>
+                </div>
+                <div class="stat-item reveal delay-2">
+                    <i class="fas fa-route"></i>
+                    <h3 class="counter" data-target="100">0</h3>
+                    <p>Custom Trips</p>
+                </div>
+                <div class="stat-item reveal delay-3">
+                    <i class="fas fa-award"></i>
+                    <h3 class="counter" data-target="10">0</h3>
+                    <p>Years Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journal / Articles -->
+    <section id="articles" class="articles section-padding">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="section-tag">Travel Journal</span>
+                <h2 class="section-title">Explore <span>Sri Lanka</span></h2>
+                <p>Read our latest travel guides, tips, and stories.</p>
+            </div>
+            
+            <div class="article-grid">
+                <!-- Article 1 -->
+                <article class="article-card reveal">
+                    <div class="art-image">
+                        <img src="assets/images (11).jfif" alt="Train to Ella">
+                    </div>
+                    <div class="art-content">
+                        <span class="art-category">Guides</span>
+                        <h3><a href="#">The Complete Guide to the Kandy to Ella Train Journey</a></h3>
+                        <p>Everything you need to know about taking the most scenic train ride in the world.</p>
+                        <div class="art-meta">
+                            <span><i class="far fa-calendar-alt"></i> Oct 12, 2026</span>
+                            <span><i class="far fa-clock"></i> 5 min read</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 2 -->
+                <article class="article-card reveal delay-1">
+                    <div class="art-image">
+                        <img src="assets/images (12).jfif" alt="Sri Lankan Food">
+                    </div>
+                    <div class="art-content">
+                        <span class="art-category">Culture</span>
+                        <h3><a href="#">10 Sri Lankan Dishes You Must Try</a></h3>
+                        <p>A culinary journey through the spices, curries, and street food of the island.</p>
+                        <div class="art-meta">
+                            <span><i class="far fa-calendar-alt"></i> Sep 28, 2026</span>
+                            <span><i class="far fa-clock"></i> 4 min read</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 3 -->
+                <article class="article-card reveal delay-2">
+                    <div class="art-image">
+                        <img src="assets/images (9).jfif" alt="Yala Safari">
+                    </div>
+                    <div class="art-content">
+                        <span class="art-category">Wildlife</span>
+                        <h3><a href="#">Spotting Leopards in Yala National Park</a></h3>
+                        <p>Expert tips for maximizing your chances of seeing the elusive Sri Lankan leopard.</p>
+                        <div class="art-meta">
+                            <span><i class="far fa-calendar-alt"></i> Sep 15, 2026</span>
+                            <span><i class="far fa-clock"></i> 6 min read</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking / Contact Section -->
+    <section id="contact" class="contact section-padding bg-light">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info reveal">
+                    <span class="section-tag">Let's Connect</span>
+                    <h2 class="section-title">Plan Your <span>Journey</span></h2>
+                    <p>Ready to discover Sri Lanka? Send us an inquiry and our travel experts will craft the perfect itinerary for you.</p>
+                    
+                    <ul class="contact-details">
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h4>WhatsApp / Phone</h4>
+                                <p>+94 77 123 4567</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="far fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>hello@srilankajourneys.com</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Office</h4>
+                                <p>Colombo 03, Sri Lanka</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="contact-form-container reveal delay-1">
+                    <form action="https://formsubmit.co/kariyapperumaholdings@gmail.com" method="POST" id="inquiry-form" class="inquiry-form">
+                        <input type="hidden" name="_subject" value="New Inquiry for Sri Lanka Journeys">
+                        <input type="hidden" name="_next" value="https://example.com/thanks.html"> <!-- This should be updated to actual URL later if needed -->
+                        <h3>Send an Inquiry</h3>
+                        <p class="form-note">This is a request form, not a final booking.</p>
+                        
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required placeholder="john@example.com">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="phone">WhatsApp / Phone</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="+1 234 567 8900">
+                            </div>
+                            <div class="form-group">
+                                <label for="dates">Travel Dates</label>
+                                <input type="text" id="dates" name="dates" placeholder="E.g., Dec 2026">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="package">Preferred Package (Optional)</label>
+                            <select id="package" name="package">
+                                <option value="">Custom Itinerary</option>
+                                <option value="essentials">Sri Lanka Essentials</option>
+                                <option value="wild">Wild Sri Lanka</option>
+                                <option value="romantic">Romantic Escape</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Special Requests / Interests</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us what you'd like to experience..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Submit Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/94771234567" class="floating-whatsapp" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="logo text-white">Sri Lanka <span>Journeys</span></a>
+                    <p>Curating premium, authentic, and unforgettable travel experiences across the teardrop island.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#destinations">Destinations</a></li>
+                        <li><a href="#packages">Tour Packages</a></li>
+                        <li><a href="#experiences">Experiences</a></li>
+                        <li><a href="#articles">Travel Journal</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for travel inspiration and offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email Address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sri Lanka Journeys. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Destination Modal -->
+    <div id="dest-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeDestModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img id="modal-img" src="" alt="Destination">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-title"></h2>
+                    <h4 id="modal-subtitle"></h4>
+                    <p id="modal-desc"></p>
+                    <div class="modal-meta">
+                        <div><strong>Best Time:</strong> <span id="modal-best-time"></span></div>
+                        <div><strong>Experiences:</strong> <span id="modal-experiences"></span></div>
+                    </div>
+                    <div class="modal-gallery" id="modal-gallery"></div>
+                    <a href="#contact" class="btn btn-primary btn-block" onclick="closeDestModal()">Plan a Trip Here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
