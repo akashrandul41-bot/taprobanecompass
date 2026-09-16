@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discover Sri Lanka | Premium Travel & Tours</title>
+    <title>Taprobane Compass | Premium Travel & Tours Sri Lanka</title>
     <meta name="description" content="Explore Sri Lanka with our premium tour packages. Discover beaches, mountains, wildlife, and culture. Plan your journey today.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
@@ -30,12 +30,17 @@
 
             <nav class="main-nav" id="main-nav">
                 <ul class="nav-links">
-                    <li><a href="#destinations">Destinations</a></li>
-                    <li><a href="#packages">Packages</a></li>
-                    <li><a href="#experiences">Experiences</a></li>
-                    <li><a href="#articles">Journal</a></li>
+                    <li><a href="#destinations" data-i18n="nav_destinations">Destinations</a></li>
+                    <li><a href="#packages" data-i18n="nav_packages">Packages</a></li>
+                    <li><a href="#experiences" data-i18n="nav_experiences">Experiences</a></li>
+                    <li><a href="#articles" data-i18n="nav_journal">Journal</a></li>
                 </ul>
-                <a href="#contact" class="btn btn-primary nav-btn">Plan Your Trip</a>
+                <div class="nav-actions">
+                    <button id="lang-toggle" class="btn btn-outline nav-lang-btn" onclick="toggleLanguage()" title="Switch Language">
+                        🌐 <span id="lang-text">العربية</span>
+                    </button>
+                    <a href="#contact" class="btn btn-primary nav-btn" data-i18n="btn_plan_trip">Plan Your Trip</a>
+                </div>
             </nav>
         </div>
     </header>
@@ -47,11 +52,11 @@
             <div class="hero-overlay"></div>
         </div>
         <div class="container hero-content">
-            <h1 class="hero-title animate-up">Discover Sri Lanka, <br><span>Your Way</span></h1>
-            <p class="hero-subtitle animate-up delay-1">From misty mountains and golden beaches to ancient kingdoms and unforgettable adventures.</p>
+            <h1 class="hero-title animate-up" data-i18n="hero_title">Discover Sri Lanka, <br><span>Your Way</span></h1>
+            <p class="hero-subtitle animate-up delay-1" data-i18n="hero_subtitle">From misty mountains and golden beaches to ancient kingdoms and unforgettable adventures.</p>
             <div class="hero-cta animate-up delay-2">
-                <a href="#packages" class="btn btn-primary">Explore Packages</a>
-                <a href="#destinations" class="btn btn-outline">Discover Destinations</a>
+                <a href="#packages" class="btn btn-primary" data-i18n="btn_explore_packages">Explore Packages</a>
+                <a href="#destinations" class="btn btn-outline" data-i18n="btn_discover_destinations">Discover Destinations</a>
             </div>
         </div>
         
@@ -68,11 +73,11 @@
         <div class="container">
             <div class="story-grid">
                 <div class="story-content reveal">
-                    <span class="section-tag">Our Story</span>
-                    <h2 class="section-title">More Than a <span>Destination</span></h2>
-                    <p>Sri Lanka is not a place you simply visit. It is a place you slowly discover — one sunrise, one cup of tea, one winding road at a time. Here, the warmth of the people matches the golden sun, and every path leads to a new adventure.</p>
-                    <p>From the wild elephants roaming in Yala to the ancient echoes of Sigiriya, we craft journeys that connect you deeply with the heart of this island.</p>
-                    <a href="#contact" class="btn btn-link">Start Your Journey <i class="fas fa-arrow-right"></i></a>
+                    <span class="section-tag" data-i18n="story_tag">Our Story</span>
+                    <h2 class="section-title" data-i18n="story_title">More Than a <span>Destination</span></h2>
+                    <p data-i18n="story_p1">Sri Lanka is not a place you simply visit. It is a place you slowly discover — one sunrise, one cup of tea, one winding road at a time. Here, the warmth of the people matches the golden sun, and every path leads to a new adventure.</p>
+                    <p data-i18n="story_p2">From the wild elephants roaming in Yala to the ancient echoes of Sigiriya, we craft journeys that connect you deeply with the heart of this island.</p>
+                    <a href="#contact" class="btn btn-link" data-i18n="btn_start_journey">Start Your Journey <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="story-images">
                     <img src="assets/images (11).jfif" alt="Sri Lanka Nine Arch Bridge" class="story-img-main reveal">
@@ -86,9 +91,9 @@
     <section id="destinations" class="destinations section-padding bg-light">
         <div class="container">
             <div class="section-header text-center reveal">
-                <span class="section-tag">Explore</span>
-                <h2 class="section-title">Popular <span>Destinations</span></h2>
-                <p>Discover the rich tapestry of landscapes and cultures that make up our beautiful island.</p>
+                <span class="section-tag" data-i18n="dest_tag">Explore</span>
+                <h2 class="section-title" data-i18n="dest_title">Popular <span>Destinations</span></h2>
+                <p data-i18n="dest_desc">Discover the rich tapestry of landscapes and cultures that make up our beautiful island.</p>
             </div>
             
             <div class="destination-grid">
@@ -96,36 +101,36 @@
                 <div class="dest-card reveal">
                     <img src="assets/images (9).jfif" alt="Sigiriya">
                     <div class="dest-info">
-                        <h3>Sigiriya</h3>
-                        <p>Ancient Rock Fortress</p>
-                        <button class="btn btn-sm" onclick="openDestModal('sigiriya')">Explore</button>
+                        <h3 data-i18n="sigiriya_title">Sigiriya</h3>
+                        <p data-i18n="sigiriya_sub">Ancient Rock Fortress</p>
+                        <button class="btn btn-sm" onclick="openDestModal('sigiriya')" data-i18n="btn_explore">Explore</button>
                     </div>
                 </div>
                 <!-- Destination 2 -->
                 <div class="dest-card reveal delay-1">
                     <img src="assets/images (10).jfif" alt="Ella">
                     <div class="dest-info">
-                        <h3>Ella</h3>
-                        <p>Misty Mountains & Tea</p>
-                        <button class="btn btn-sm" onclick="openDestModal('ella')">Explore</button>
+                        <h3 data-i18n="ella_title">Ella</h3>
+                        <p data-i18n="ella_sub">Misty Mountains & Tea</p>
+                        <button class="btn btn-sm" onclick="openDestModal('ella')" data-i18n="btn_explore">Explore</button>
                     </div>
                 </div>
                 <!-- Destination 3 -->
                 <div class="dest-card reveal delay-2">
                     <img src="assets/29679305-a018-4ba0-9fb9-8cd730d72efa.jfif" alt="Galle">
                     <div class="dest-info">
-                        <h3>Galle</h3>
-                        <p>Historic Dutch Fort</p>
-                        <button class="btn btn-sm" onclick="openDestModal('galle')">Explore</button>
+                        <h3 data-i18n="galle_title">Galle</h3>
+                        <p data-i18n="galle_sub">Historic Dutch Fort</p>
+                        <button class="btn btn-sm" onclick="openDestModal('galle')" data-i18n="btn_explore">Explore</button>
                     </div>
                 </div>
                 <!-- Destination 4 -->
                 <div class="dest-card reveal delay-3">
                     <img src="assets/2a4e8148-1891-4cd0-890e-3bb8c23c8fca.jfif" alt="Mirissa">
                     <div class="dest-info">
-                        <h3>Mirissa</h3>
-                        <p>Whales & Golden Sands</p>
-                        <button class="btn btn-sm" onclick="openDestModal('mirissa')">Explore</button>
+                        <h3 data-i18n="mirissa_title">Mirissa</h3>
+                        <p data-i18n="mirissa_sub">Whales & Golden Sands</p>
+                        <button class="btn btn-sm" onclick="openDestModal('mirissa')" data-i18n="btn_explore">Explore</button>
                     </div>
                 </div>
             </div>
@@ -136,9 +141,9 @@
     <section id="packages" class="packages section-padding">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-tag">Journeys</span>
-                <h2 class="section-title">Our Featured <span>Packages</span></h2>
-                <p>Curated itineraries designed to give you the ultimate Sri Lankan experience.</p>
+                <span class="section-tag" data-i18n="pkg_tag">Journeys</span>
+                <h2 class="section-title" data-i18n="pkg_title">Our Featured <span>Packages</span></h2>
+                <p data-i18n="pkg_desc">Curated itineraries designed to give you the ultimate Sri Lankan experience.</p>
             </div>
             
             <div class="package-list">
@@ -146,18 +151,18 @@
                 <div class="package-card reveal">
                     <div class="pkg-image">
                         <img src="assets/images (9).jfif" alt="Sri Lanka Essentials">
-                        <div class="pkg-badge">7 Days / 6 Nights</div>
+                        <div class="pkg-badge" data-i18n="pkg1_badge">7 Days / 6 Nights</div>
                     </div>
                     <div class="pkg-content">
-                        <h3>Sri Lanka Essentials</h3>
-                        <p class="pkg-desc">The perfect introduction to Sri Lanka, covering the cultural triangle, tea country, and southern coast.</p>
+                        <h3 data-i18n="pkg1_title">Sri Lanka Essentials</h3>
+                        <p class="pkg-desc" data-i18n="pkg1_desc">The perfect introduction to Sri Lanka, covering the cultural triangle, tea country, and southern coast.</p>
                         <ul class="pkg-highlights">
-                            <li><i class="fas fa-map-marker-alt"></i> Colombo, Sigiriya, Kandy, Ella, Galle</li>
-                            <li><i class="fas fa-star"></i> 5+ Premium Experiences</li>
+                            <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="pkg1_dest">Colombo, Sigiriya, Kandy, Ella, Galle</span></li>
+                            <li><i class="fas fa-star"></i> <span data-i18n="pkg1_exp">5+ Premium Experiences</span></li>
                         </ul>
                         <div class="pkg-footer">
-                            <span class="price">From $890</span>
-                            <button class="btn btn-primary btn-sm" onclick="openModal('Sri Lanka Essentials')">View Details</button>
+                            <span class="price" data-i18n="pkg1_price">From $890</span>
+                            <button class="btn btn-primary btn-sm" onclick="openModal('Sri Lanka Essentials')" data-i18n="btn_view_details">View Details</button>
                         </div>
                     </div>
                 </div>
@@ -166,18 +171,18 @@
                 <div class="package-card reveal delay-1">
                     <div class="pkg-image">
                         <img src="assets/images (11).jfif" alt="Wild Sri Lanka">
-                        <div class="pkg-badge">6 Days / 5 Nights</div>
+                        <div class="pkg-badge" data-i18n="pkg2_badge">6 Days / 5 Nights</div>
                     </div>
                     <div class="pkg-content">
-                        <h3>Wild Sri Lanka</h3>
-                        <p class="pkg-desc">An immersive wildlife safari experience focusing on leopards, elephants, and exotic birds.</p>
+                        <h3 data-i18n="pkg2_title">Wild Sri Lanka</h3>
+                        <p class="pkg-desc" data-i18n="pkg2_desc">An immersive wildlife safari experience focusing on leopards, elephants, and exotic birds.</p>
                         <ul class="pkg-highlights">
-                            <li><i class="fas fa-map-marker-alt"></i> Yala, Udawalawe, Minneriya, Wilpattu</li>
-                            <li><i class="fas fa-star"></i> Luxury Tented Camps</li>
+                            <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="pkg2_dest">Yala, Udawalawe, Minneriya, Wilpattu</span></li>
+                            <li><i class="fas fa-star"></i> <span data-i18n="pkg2_exp">Luxury Tented Camps</span></li>
                         </ul>
                         <div class="pkg-footer">
-                            <span class="price">From $1,150</span>
-                            <button class="btn btn-primary btn-sm" onclick="openModal('Wild Sri Lanka')">View Details</button>
+                            <span class="price" data-i18n="pkg2_price">From $1,150</span>
+                            <button class="btn btn-primary btn-sm" onclick="openModal('Wild Sri Lanka')" data-i18n="btn_view_details">View Details</button>
                         </div>
                     </div>
                 </div>
@@ -186,18 +191,18 @@
                 <div class="package-card reveal delay-2">
                     <div class="pkg-image">
                         <img src="assets/images (13).jfif" alt="Romantic Escape">
-                        <div class="pkg-badge">8 Days / 7 Nights</div>
+                        <div class="pkg-badge" data-i18n="pkg3_badge">8 Days / 7 Nights</div>
                     </div>
                     <div class="pkg-content">
-                        <h3>Romantic Escape</h3>
-                        <p class="pkg-desc">Boutique hotels, private dinners, and secluded beaches for the perfect honeymoon.</p>
+                        <h3 data-i18n="pkg3_title">Romantic Escape</h3>
+                        <p class="pkg-desc" data-i18n="pkg3_desc">Boutique hotels, private dinners, and secluded beaches for the perfect honeymoon.</p>
                         <ul class="pkg-highlights">
-                            <li><i class="fas fa-map-marker-alt"></i> Kandy, Nuwara Eliya, Bentota</li>
-                            <li><i class="fas fa-star"></i> Romantic Experiences</li>
+                            <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="pkg3_dest">Kandy, Nuwara Eliya, Bentota</span></li>
+                            <li><i class="fas fa-star"></i> <span data-i18n="pkg3_exp">Romantic Experiences</span></li>
                         </ul>
                         <div class="pkg-footer">
-                            <span class="price">From $1,450</span>
-                            <button class="btn btn-primary btn-sm" onclick="openModal('Romantic Escape')">View Details</button>
+                            <span class="price" data-i18n="pkg3_price">From $1,450</span>
+                            <button class="btn btn-primary btn-sm" onclick="openModal('Romantic Escape')" data-i18n="btn_view_details">View Details</button>
                         </div>
                     </div>
                 </div>
@@ -212,22 +217,22 @@
                 <div class="stat-item reveal">
                     <i class="fas fa-smile"></i>
                     <h3 class="counter" data-target="500">0</h3>
-                    <p>Happy Travelers</p>
+                    <p data-i18n="stat_happy_travelers">Happy Travelers</p>
                 </div>
                 <div class="stat-item reveal delay-1">
                     <i class="fas fa-map-marked-alt"></i>
                     <h3 class="counter" data-target="50">0</h3>
-                    <p>Destinations</p>
+                    <p data-i18n="stat_destinations">Destinations</p>
                 </div>
                 <div class="stat-item reveal delay-2">
                     <i class="fas fa-route"></i>
                     <h3 class="counter" data-target="100">0</h3>
-                    <p>Custom Trips</p>
+                    <p data-i18n="stat_custom_trips">Custom Trips</p>
                 </div>
                 <div class="stat-item reveal delay-3">
                     <i class="fas fa-award"></i>
                     <h3 class="counter" data-target="10">0</h3>
-                    <p>Years Experience</p>
+                    <p data-i18n="stat_years_experience">Years Experience</p>
                 </div>
             </div>
         </div>
@@ -237,9 +242,9 @@
     <section id="articles" class="articles section-padding">
         <div class="container">
             <div class="section-header text-center reveal">
-                <span class="section-tag">Travel Journal</span>
-                <h2 class="section-title">Explore <span>Sri Lanka</span></h2>
-                <p>Read our latest travel guides, tips, and stories.</p>
+                <span class="section-tag" data-i18n="art_tag">Travel Journal</span>
+                <h2 class="section-title" data-i18n="art_title">Explore <span>Sri Lanka</span></h2>
+                <p data-i18n="art_desc">Read our latest travel guides, tips, and stories.</p>
             </div>
             
             <div class="article-grid">
@@ -249,12 +254,12 @@
                         <img src="assets/images (11).jfif" alt="Train to Ella">
                     </div>
                     <div class="art-content">
-                        <span class="art-category">Guides</span>
-                        <h3><a href="#">The Complete Guide to the Kandy to Ella Train Journey</a></h3>
-                        <p>Everything you need to know about taking the most scenic train ride in the world.</p>
+                        <span class="art-category" data-i18n="art1_cat">Guides</span>
+                        <h3><a href="#" data-i18n="art1_title">The Complete Guide to the Kandy to Ella Train Journey</a></h3>
+                        <p data-i18n="art1_desc">Everything you need to know about taking the most scenic train ride in the world.</p>
                         <div class="art-meta">
                             <span><i class="far fa-calendar-alt"></i> Oct 12, 2026</span>
-                            <span><i class="far fa-clock"></i> 5 min read</span>
+                            <span><i class="far fa-clock"></i> <span data-i18n="art1_read">5 min read</span></span>
                         </div>
                     </div>
                 </article>
@@ -265,12 +270,12 @@
                         <img src="assets/images (12).jfif" alt="Sri Lankan Food">
                     </div>
                     <div class="art-content">
-                        <span class="art-category">Culture</span>
-                        <h3><a href="#">10 Sri Lankan Dishes You Must Try</a></h3>
-                        <p>A culinary journey through the spices, curries, and street food of the island.</p>
+                        <span class="art-category" data-i18n="art2_cat">Culture</span>
+                        <h3><a href="#" data-i18n="art2_title">10 Sri Lankan Dishes You Must Try</a></h3>
+                        <p data-i18n="art2_desc">A culinary journey through the spices, curries, and street food of the island.</p>
                         <div class="art-meta">
                             <span><i class="far fa-calendar-alt"></i> Sep 28, 2026</span>
-                            <span><i class="far fa-clock"></i> 4 min read</span>
+                            <span><i class="far fa-clock"></i> <span data-i18n="art2_read">4 min read</span></span>
                         </div>
                     </div>
                 </article>
@@ -281,12 +286,12 @@
                         <img src="assets/images (9).jfif" alt="Yala Safari">
                     </div>
                     <div class="art-content">
-                        <span class="art-category">Wildlife</span>
-                        <h3><a href="#">Spotting Leopards in Yala National Park</a></h3>
-                        <p>Expert tips for maximizing your chances of seeing the elusive Sri Lankan leopard.</p>
+                        <span class="art-category" data-i18n="art3_cat">Wildlife</span>
+                        <h3><a href="#" data-i18n="art3_title">Spotting Leopards in Yala National Park</a></h3>
+                        <p data-i18n="art3_desc">Expert tips for maximizing your chances of seeing the elusive Sri Lankan leopard.</p>
                         <div class="art-meta">
                             <span><i class="far fa-calendar-alt"></i> Sep 15, 2026</span>
-                            <span><i class="far fa-clock"></i> 6 min read</span>
+                            <span><i class="far fa-clock"></i> <span data-i18n="art3_read">6 min read</span></span>
                         </div>
                     </div>
                 </article>
@@ -299,30 +304,30 @@
         <div class="container">
             <div class="contact-wrapper">
                 <div class="contact-info reveal">
-                    <span class="section-tag">Let's Connect</span>
-                    <h2 class="section-title">Plan Your <span>Journey</span></h2>
-                    <p>Ready to discover Sri Lanka? Send us an inquiry and our travel experts will craft the perfect itinerary for you.</p>
+                    <span class="section-tag" data-i18n="contact_tag">Let's Connect</span>
+                    <h2 class="section-title" data-i18n="contact_title">Plan Your <span>Journey</span></h2>
+                    <p data-i18n="contact_desc">Ready to discover Sri Lanka? Send us an inquiry and our travel experts will craft the perfect itinerary for you.</p>
                     
                     <ul class="contact-details">
                         <li>
                             <i class="fab fa-whatsapp"></i>
                             <div>
-                                <h4>WhatsApp / Phone</h4>
-                                <p>+94 71 496 6436</p>
+                                <h4 data-i18n="contact_phone_title">WhatsApp / Phone</h4>
+                                <p><a href="tel:+94 71 496 6436" style="color: inherit;">0714966436</a></p>
                             </div>
                         </li>
                         <li>
                             <i class="far fa-envelope"></i>
                             <div>
-                                <h4>Email</h4>
-                                <p>Kariyapperumaholdings@gmail.com</p>
+                                <h4 data-i18n="contact_email_title">Email</h4>
+                                <p><a href="mailto:Kariyapperumaholdings@gmail.com" style="color: inherit;">kariyapperumaholdings@gmail.com</a></p>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
                             <div>
-                                <h4>Office</h4>
-                                <p>Kariyapperuma Holdings,Ambanpola, Sri Lanka</p>
+                                <h4 data-i18n="contact_office_title">Office</h4>
+                                <p data-i18n="contact_office_address">Kariyapperuma holdings, Ambanpola, Sri Lanka</p>
                             </div>
                         </li>
                     </ul>
@@ -330,49 +335,50 @@
                 
                 <div class="contact-form-container reveal delay-1">
                     <form action="https://formsubmit.co/kariyapperumaholdings@gmail.com" method="POST" id="inquiry-form" class="inquiry-form">
-                        <input type="hidden" name="_subject" value="New Inquiry for Sri Lanka Journeys">
-                        <input type="hidden" name="_next" value="https://example.com/thanks.html"> <!-- This should be updated to actual URL later if needed -->
-                        <h3>Send an Inquiry</h3>
-                        <p class="form-note">This is a request form, not a final booking.</p>
+                        <input type="hidden" name="_subject" value="New Travel Inquiry - Taprobane Compass">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <h3 data-i18n="form_title">Send an Inquiry</h3>
+                        <p class="form-note" data-i18n="form_note">This is a request form, not a final booking.</p>
                         
                         <div class="form-group-row">
                             <div class="form-group">
-                                <label for="name">Full Name</label>
-                                <input type="text" id="name" name="name" required placeholder="John Doe">
+                                <label for="name" data-i18n="label_name">Full Name</label>
+                                <input type="text" id="name" name="name" required placeholder="John Doe" data-i18n-placeholder="placeholder_name">
                             </div>
                             <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required placeholder="john@example.com">
+                                <label for="email" data-i18n="label_email">Email</label>
+                                <input type="email" id="email" name="email" required placeholder="john@example.com" data-i18n-placeholder="placeholder_email">
                             </div>
                         </div>
                         
                         <div class="form-group-row">
                             <div class="form-group">
-                                <label for="phone">WhatsApp / Phone</label>
-                                <input type="tel" id="phone" name="phone" required placeholder="+1 234 567 8900">
+                                <label for="phone" data-i18n="label_phone">WhatsApp / Phone</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="0714966436" data-i18n-placeholder="placeholder_phone">
                             </div>
                             <div class="form-group">
-                                <label for="dates">Travel Dates</label>
-                                <input type="text" id="dates" name="dates" placeholder="E.g., Dec 2026">
+                                <label for="dates" data-i18n="label_dates">Travel Dates</label>
+                                <input type="text" id="dates" name="dates" placeholder="E.g., Dec 2026" data-i18n-placeholder="placeholder_dates">
                             </div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="package">Preferred Package (Optional)</label>
+                            <label for="package" data-i18n="label_package">Preferred Package (Optional)</label>
                             <select id="package" name="package">
-                                <option value="">Custom Itinerary</option>
-                                <option value="essentials">Sri Lanka Essentials</option>
-                                <option value="wild">Wild Sri Lanka</option>
-                                <option value="romantic">Romantic Escape</option>
+                                <option value="" data-i18n="opt_custom">Custom Itinerary</option>
+                                <option value="essentials" data-i18n="opt_essentials">Sri Lanka Essentials</option>
+                                <option value="wild" data-i18n="opt_wild">Wild Sri Lanka</option>
+                                <option value="romantic" data-i18n="opt_romantic">Romantic Escape</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
-                            <label for="message">Special Requests / Interests</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Tell us what you'd like to experience..."></textarea>
+                            <label for="message" data-i18n="label_message">Special Requests / Interests</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us what you'd like to experience..." data-i18n-placeholder="placeholder_message"></textarea>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary btn-block">Submit Inquiry</button>
+                        <button type="submit" class="btn btn-primary btn-block" data-i18n="btn_submit_inquiry">Submit Inquiry</button>
                     </form>
                 </div>
             </div>
@@ -380,7 +386,7 @@
     </section>
 
     <!-- Floating WhatsApp -->
-    <a href="https://wa.me/94714966436" class="floating-whatsapp" target="_blank" rel="noopener noreferrer">
+    <a href="https://wa.me/94714966436" class="floating-whatsapp" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -390,7 +396,7 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <a href="#" class="logo text-white">Taprobane <span>Compass</span></a>
-                    <p>Curating premium, authentic, and unforgettable travel experiences across the teardrop island.</p>
+                    <p data-i18n="footer_brand_desc">Curating premium, authentic, and unforgettable travel experiences across the teardrop island.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -399,39 +405,39 @@
                 </div>
                 
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h4 data-i18n="footer_quick_links">Quick Links</h4>
                     <ul>
-                        <li><a href="#destinations">Destinations</a></li>
-                        <li><a href="#packages">Tour Packages</a></li>
-                        <li><a href="#experiences">Experiences</a></li>
-                        <li><a href="#articles">Travel Journal</a></li>
+                        <li><a href="#destinations" data-i18n="nav_destinations">Destinations</a></li>
+                        <li><a href="#packages" data-i18n="nav_packages">Tour Packages</a></li>
+                        <li><a href="#experiences" data-i18n="nav_experiences">Experiences</a></li>
+                        <li><a href="#articles" data-i18n="nav_journal">Travel Journal</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
-                    <h4>Support</h4>
+                    <h4 data-i18n="footer_support">Support</h4>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#" data-i18n="footer_about">About Us</a></li>
+                        <li><a href="#contact" data-i18n="footer_contact">Contact Us</a></li>
+                        <li><a href="#" data-i18n="footer_faqs">FAQs</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-newsletter">
-                    <h4>Newsletter</h4>
-                    <p>Subscribe for travel inspiration and offers.</p>
+                    <h4 data-i18n="footer_newsletter_title">Newsletter</h4>
+                    <p data-i18n="footer_newsletter_desc">Subscribe for travel inspiration and offers.</p>
                     <form class="newsletter-form">
-                        <input type="email" placeholder="Your Email Address" required>
+                        <input type="email" placeholder="Your Email Address" required data-i18n-placeholder="placeholder_newsletter">
                         <button type="submit"><i class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2026 Kariyapperuma Holdings. All rights reserved.</p>
+                <p data-i18n="footer_copy">&copy; 2026 Taprobane Compass. All rights reserved.</p>
                 <div class="footer-legal">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
+                    <a href="#" data-i18n="footer_privacy">Privacy Policy</a>
+                    <a href="#" data-i18n="footer_terms">Terms of Service</a>
                 </div>
             </div>
         </div>
@@ -450,11 +456,11 @@
                     <h4 id="modal-subtitle"></h4>
                     <p id="modal-desc"></p>
                     <div class="modal-meta">
-                        <div><strong>Best Time:</strong> <span id="modal-best-time"></span></div>
-                        <div><strong>Experiences:</strong> <span id="modal-experiences"></span></div>
+                        <div><strong data-i18n="modal_best_time_label">Best Time:</strong> <span id="modal-best-time"></span></div>
+                        <div><strong data-i18n="modal_experiences_label">Experiences:</strong> <span id="modal-experiences"></span></div>
                     </div>
                     <div class="modal-gallery" id="modal-gallery"></div>
-                    <a href="#contact" class="btn btn-primary btn-block" onclick="closeDestModal()">Plan a Trip Here</a>
+                    <a href="#contact" class="btn btn-primary btn-block" onclick="closeDestModal()" data-i18n="modal_btn_plan">Plan a Trip Here</a>
                 </div>
             </div>
         </div>
